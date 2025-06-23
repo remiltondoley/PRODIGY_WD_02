@@ -1,0 +1,148 @@
+/* Base styles */
+body {
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  transition: background 0.3s, color 0.3s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.top-controls {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  right: 10px;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 20px;
+}
+
+.stopwatch-container {
+  background: #ffffff;
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  width: 90%;
+  max-width: 400px;
+}
+
+.title {
+  font-size: 1.8em;
+  margin-bottom: 15px;
+}
+
+.time {
+  font-size: 2.5em;
+  font-weight: 600;
+  color: #007acc;
+  margin-bottom: 25px;
+  font-family: 'Courier New', monospace;
+}
+
+.controls button {
+  background-color: #007acc;
+  color: #fff;
+  border: none;
+  padding: 10px 16px;
+  margin: 5px;
+  border-radius: 8px;
+  font-size: 1em;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  min-width: 70px;
+}
+
+.controls button:hover {
+  background-color: #005f99;
+}
+
+.lap-container {
+  margin-top: 20px;
+  text-align: left;
+}
+
+.lap-container h2 {
+  font-size: 1.2em;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+#laps {
+  list-style-type: decimal;
+  max-height: 150px;
+  overflow-y: auto;
+  padding-left: 20px;
+  margin: 0;
+}
+
+#laps li {
+  background: #eef6fc;
+  padding: 6px 12px;
+  margin-bottom: 6px;
+  border-left: 4px solid #007acc;
+  border-radius: 5px;
+}
+
+/* Dark mode */
+body.dark-mode {
+  background: #1e1e2f;
+  color: #f0f0f0;
+}
+
+body.dark-mode .stopwatch-container {
+  background: #2c2c3c;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+body.dark-mode .time {
+  color: #00c0ff;
+}
+
+body.dark-mode .controls button {
+  background-color: #00c0ff;
+  color: #000;
+}
+
+body.dark-mode .controls button:hover {
+  background-color: #00a0d0;
+}
+
+body.dark-mode #laps li {
+  background: #3b3b4f;
+  border-left-color: #00c0ff;
+  color: #fff;
+}
+
+/* Background themes */
+body.sunset {
+  background: linear-gradient(to bottom right, #ff7e5f, #feb47b);
+}
+
+body.aqua {
+  background: linear-gradient(to bottom right, #00d2ff, #3a7bd5);
+}
+
+body.forest {
+  background: linear-gradient(to bottom right, #2e8b57, #556b2f);
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+  .stopwatch-container {
+    padding: 20px;
+  }
+
+  .time {
+    font-size: 2em;
+  }
+
+  .controls button {
+    padding: 8px 14px;
+    font-size: 0.9em;
+  }
+}
